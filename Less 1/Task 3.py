@@ -1,31 +1,12 @@
-#ВАРИАНТ 1
-print('Вариант 1')
+count_comp = 1000  # количество компьютеров в botnet сети
+plus_today = 3  # добавляется каждый день
+minus_today = 2  # уменьшается каждый день
+days = 30  # всего дней
 
-botnet = int(input('Колличество агентов в Botnet: '))
-plus = int(input('Добавляется агентов в день: '))
-minus = int(input('Распознается агентов в день: '))
-days = int(input('Всего дней: '))
+minus_for_all_days = days * minus_today
+plus_for_all_days = days * plus_today
+plus_count_comp_for_all_days = count_comp - minus_for_all_days + plus_for_all_days
+minus_count_comp_for_all_days = count_comp - minus_for_all_days
 
-days_minus = days * minus
-days_plus = days * plus
-plus_botnet = botnet - days_minus + days_plus
-minus_botnet = botnet - days_minus
-
-print(f"За {days} дней Ботнет уменьшится на {days_minus} агентов и общие число составит {minus_botnet} без добавления новых.\n"
-      f"За {days} дней Ботнет уменьшится на {days_minus} агентов, но если добавлять по {plus} агентов в день, то мы получим {plus_botnet}")
-
-#ВАРИАНТ 2
-print('\n\nВариант 2')
-
-x = int()
-y = int()
-n = int()
-
-while n < 30:
-    n = n + 1
-    x = 1000 -  (n * 2) + (n * 3)
-    y = 1000 - (n * 2)
-
-print(f'Колличество без увеличения {y}\n'
-      f'Колличество с увеличением {x}\n'
-      f'Колличество дней {n}')
+print('Если не будет добавлять новых', minus_count_comp_for_all_days)
+print('Если будет добавлять 3 новый каждый день', plus_count_comp_for_all_days)
