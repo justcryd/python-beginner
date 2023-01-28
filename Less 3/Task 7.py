@@ -15,6 +15,8 @@ letter_six = word[250]
 word = [letter_one, letter_two, letter_tree, letter_four, letter_five,
         letter_six]
 
+word3 = len(word2)
+
 del word2[1:50]
 del word2[2:51]
 del word2[3:52]
@@ -24,6 +26,7 @@ del word2[6:]
 
 print(''.join(word))
 print(''.join(word2))
+print(word3)
 
 # slice_string = list(slice_string[0])
 # p_to_string = slice_string.index('p')
