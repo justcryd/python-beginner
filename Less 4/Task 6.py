@@ -4,3 +4,4 @@ print(''.join(target_dict)[::2])
 print('Сумма значений словаря:', sum(target_dict.values()))
 print('Отсортированный список значений словаря:', sorted(target_dict.values()))
 print('Сумма третьих значений словоря:', sum(list(target_dict.values())[::3]))
+
