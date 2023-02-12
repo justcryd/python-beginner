@@ -11,11 +11,11 @@
 
 if len(random_string := input('Введите строку: ')) > 100:
     print('Количество символов не должно быть больше 100!')
-elif len(tuple(random_string)) == 1:
+elif len(random_string) % 10 == 1 and len(random_string) != 11:
     print(f'В строке {len(random_string)} символ')
-elif 2 <= len(tuple(random_string)) <= 4:
+elif 2 <= len(random_string) % 10 <= 4 and not 12 <= len(random_string) <= 14:
     print(f'В строке {len(random_string)} символа')
-elif 5 <= len(tuple(random_string)) <= 100:
+else:
     print(f'В строке {len(random_string)} символов')
 
-print(len(tuple(random_string)))
+print({12, 13, 14})
