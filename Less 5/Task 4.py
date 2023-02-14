@@ -13,7 +13,7 @@ if len(random_string := input('Введите строку: ')) > 100:
     print('Количество символов не должно быть больше 100!')
 elif len(random_string) % 10 == 1 and len(random_string) != 11:
     print(f'В строке {len(random_string)} символ')
-elif 2 <= len(random_string) % 10 <= 4 and not 12 <= len(random_string) <= 14:
+elif 2 <= len(random_string) % 10 <= 4 and not len(random_string) == [12, 13, 14]:
     print(f'В строке {len(random_string)} символа')
 else:
     print(f'В строке {len(random_string)} символов')
